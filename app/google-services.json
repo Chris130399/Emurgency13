@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "270933247400",
+    "firebase_url": "https://emurgency13.firebaseio.com",
+    "project_id": "emurgency13",
+    "storage_bucket": "emurgency13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270933247400:android:2a04decaa88f3d2fb6499d",
+        "android_client_info": {
+          "package_name": "com.example.emurgency13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270933247400-keufej94j9bbs1rv82dviu7sb5e0hk14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emurgency13",
+            "certificate_hash": "a7d9813820a6b51a3fcf6f259761b5f7feec144a"
+          }
+        },
+        {
+          "client_id": "270933247400-l8qekjbv100c3068t4on3fuojvrbvnhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsS92z05fYGiV6fh9rRsjINMk-83klhjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270933247400-l8qekjbv100c3068t4on3fuojvrbvnhc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
