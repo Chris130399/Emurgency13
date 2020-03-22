@@ -1,41 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20sp">
+    android:padding="20sp"
+    android:background="@drawable/background_2">
 
-    <ImageView
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:id="@+id/profileImage"
-        android:src="@drawable/ic_default_user"
-        android:layout_marginBottom="20sp"/>
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:hint="Name"
-        android:layout_marginBottom="20sp"/>
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:hint="Phone"
-        android:layout_marginBottom="20sp"
-        android:inputType="number"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/confirm"
-        android:text="confirm"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/back"
-        android:text="back"/>
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="427dp"
+        android:layout_gravity="center"
+        android:background="@drawable/profile_background"
+        android:elevation="15dp"
+        android:padding="20dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:src="@drawable/ic_default_user"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/sf_bold"
+            android:gravity="center"
+            android:hint="User Name"
+            android:textColor="@color/blue_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage"
+            app:layout_constraintVertical_bias="0.133"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/sf_bold"
+            android:gravity="center"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/blue_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage"
+            app:layout_constraintVertical_bias="0.356"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/confirm_button"
+            android:elevation="25dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="confirm"
+            android:textColor="@color/off_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:background="@drawable/maps_button"
+            android:elevation="25dp"
+            android:fontFamily="@font/sf_bold"
+            android:text="back"
+            android:textColor="@color/off_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.989" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

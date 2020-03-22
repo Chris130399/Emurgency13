@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.example.emurgency13"
-        minSdkVersion 22
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -48,6 +49,17 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.google.android.gms:play-services-places:17.0.0'
     implementation 'com.google.android.libraries.places:places:2.1.0'
+
+    implementation 'com.google.android.material:material:1.1.0'
+
+    //Validation
+    implementation 'com.basgeekball:awesome-validation:4.2'
+
+    //Circular ImageView
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+
+    //Razorpay
+    implementation 'com.razorpay:checkout:1.5.13'
 
 }
 apply plugin: 'com.google.gms.google-services'

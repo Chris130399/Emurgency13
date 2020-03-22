@@ -1,4 +1,4 @@
-package com.example.emurgency13;
+package com.example.emurgency13.Driver;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -7,12 +7,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
-import android.os.Looper;
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
-import androidx.core.content.ContextCompat;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -22,16 +18,24 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+
 import com.bumptech.glide.Glide;
 import com.directions.route.AbstractRouting;
 import com.directions.route.Route;
 import com.directions.route.RouteException;
 import com.directions.route.Routing;
 import com.directions.route.RoutingListener;
+import com.example.emurgency13.HistoryActivity;
+import com.example.emurgency13.MainActivity;
+import com.example.emurgency13.R;
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
-import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
@@ -92,6 +96,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         setContentView(R.layout.activity_driver_map);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         polylines = new ArrayList<>();
+
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -344,7 +349,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         driverRef.child(requestId).setValue(true);
         customerRef.child(requestId).setValue(true);
 
-        HashMap<String, Object> map = new HashMap<String, Object>();
+        HashMap map = new HashMap();
         map.put("driver", userId);
         map.put("customer", customerId);
         map.put("rating", 0);
@@ -374,7 +379,8 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
         if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+            if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED &&
+                    ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ){
 
             }else{
                 checkLocationPermission();
@@ -422,7 +428,8 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
     };
 
     private void checkLocationPermission() {
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ){
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
                 new AlertDialog.Builder(this)
                         .setTitle("give permission")
@@ -487,7 +494,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
 
 
     private List<Polyline> polylines;
-    private static final int[] COLORS = new int[]{R.color.primary_dark_material_light};
+    private static final int[] COLORS = new int[]{R.color.red};
     @Override
     public void onRoutingFailure(RouteException e) {
         if(e != null) {

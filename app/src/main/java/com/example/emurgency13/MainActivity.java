@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.emurgency13.Customer.CustomerLoginActivity;
+import com.example.emurgency13.Driver.DriverLoginActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mDriver, mCustomer;
@@ -26,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DriverLoginActivity.class);
                 startActivity(intent);
-                finish();
-                return;
             }
         });
 
@@ -36,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CustomerLoginActivity.class);
                 startActivity(intent);
-                finish();
-                return;
             }
         });
     }

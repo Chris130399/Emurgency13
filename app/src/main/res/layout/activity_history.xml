@@ -12,35 +12,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
             android:padding="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Balance: 0€"
+            android:text="Balance: 0₹"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/blue_gray"
+            android:textSize="25sp"
             android:id="@+id/balance"
             android:visibility="gone"/>
+
         <EditText
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/payoutEmail"
-            android:hint="paypal email"/>
+            android:gravity="center"
+            android:fontFamily="@font/sf_light"
+            android:alpha="0.9"
+            android:textColor="@color/light_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:hint="does not work in test mode"/>
+
         <Button
             android:visibility="gone"
-            android:text="payout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:text="Payout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/maps_button"
+            android:textColor="@color/off_white"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/sf_bold"
+            android:layout_marginStart="80dp"
             android:id="@+id/payout"/>
+
     </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="15dp">
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/historyRecyclerView"
             android:scrollbars="vertical">
+
         </androidx.recyclerview.widget.RecyclerView>
 
     </androidx.core.widget.NestedScrollView>

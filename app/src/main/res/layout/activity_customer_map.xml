@@ -3,39 +3,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomerMapActivity">
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Customer.CustomerMapActivity">
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        map:cameraBearing="0"
+        map:cameraZoom="20"
+        map:mapType="normal"
+        map:uiCompass="true"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="true"
+        map:uiZoomControls="true"
+        map:uiZoomGestures="true" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/buttons">
+            android:layout_height="50dp"
+            android:id="@+id/buttons"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
             <Button
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
                 android:id="@+id/logout"
-                android:text="logout"/>
+                android:text="logout"
+                android:elevation="10dp"
+                android:fontFamily="@font/sf_bold"
+                android:textColor="@color/off_white"
+                android:background="@drawable/maps_button"/>
+
             <Button
-                android:layout_weight="1"
+                android:layout_weight="0.8"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:id="@+id/history"
-                android:text="history"/>
+                android:text="history"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/red"
+                android:fontFamily="@font/sf_bold"
+                android:background="@drawable/maps_button2"/>
+
             <Button
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
                 android:id="@+id/settings"
-                android:text="Settings"/>
+                android:text="Settings"
+                android:elevation="10dp"
+                android:textColor="@color/off_white"
+                android:fontFamily="@font/sf_bold"
+                android:background="@drawable/maps_button"/>
+
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -43,56 +76,73 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20sp">
+
             <fragment
                 android:id="@+id/place_autocomplete_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
-                />
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment" />
         </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
 
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="bottom">
+
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/driverInfo"
+            android:elevation="10dp"
             android:layout_gravity="bottom"
             android:orientation="horizontal"
-            android:background="@android:color/white"
+            android:background="@drawable/drivers_info"
             android:visibility="gone">
-            <ImageView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                app:civ_border_color="@color/red"
+                app:civ_border_width="4dp"
                 android:id="@+id/driverProfileImage"
-                android:src="@drawable/ic_default_user"
-                android:padding="20sp"/>
+                android:src="@drawable/ic_default_user" />
+
             <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="40sp">
+                android:paddingStart="40sp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/driverName"
+                    android:textColor="@color/blue_gray"
+                    android:fontFamily="@font/sf_bold"
                     android:paddingBottom="10sp"
                     android:paddingTop="20sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/driverPhone"
+                    android:textColor="@color/blue_gray"
+                    android:fontFamily="@font/sf_bold"
                     android:paddingBottom="10sp"
                     android:paddingTop="20sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/driverCar"
+                    android:textColor="@color/blue_gray"
+                    android:fontFamily="@font/sf_bold"
                     android:paddingBottom="10sp"
                     android:paddingTop="20sp"/>
                 <RatingBar
@@ -102,42 +152,62 @@
                     android:layout_gravity="center"
                     android:numStars="5"
                     android:stepSize="0.1"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
-            android:background="@android:color/white"
+
+            android:background="@drawable/call_ambulace_layout"
+            android:elevation="10dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:id="@+id/radioGroup"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
+
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AmbulanceX"
+                    android:fontFamily="@font/sf_bold"
+                    android:buttonTint="@color/off_white"
+                    android:textColor="@color/off_white"
                     android:id="@+id/UberX"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AmbulanceY"
+                    android:fontFamily="@font/sf_bold"
+                    android:buttonTint="@color/off_white"
+                    android:textColor="@color/off_white"
                     android:id="@+id/UberBlack"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AmbulanceZ"
-                    android:id="@+id/UberXl"/>
+
             </RadioGroup>
 
             <Button
                 android:layout_gravity="bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="call Ambulance"
+                android:text="Call Ambulance"
+                android:fontFamily="@font/sf_bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="10dp"
+                android:background="@drawable/call_ambulance"
+                android:textColor="@color/off_white"
                 android:id="@+id/request"/>
+
         </LinearLayout>
+
     </LinearLayout>
+
 </FrameLayout>

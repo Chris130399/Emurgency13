@@ -20,6 +20,7 @@ import com.directions.route.Route;
 import com.directions.route.RouteException;
 import com.directions.route.Routing;
 import com.directions.route.RoutingListener;
+import com.example.emurgency13.Payments.RazorPay;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,7 +39,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
-import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
 import com.paypal.android.sdk.payments.PaymentActivity;
 import com.paypal.android.sdk.payments.PaymentConfirmation;
@@ -46,7 +46,6 @@ import com.paypal.android.sdk.payments.PaymentConfirmation;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -189,7 +188,9 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
         mPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                payPalPayment();
+
+                Intent intent = new Intent(getApplicationContext(), RazorPay.class);
+                startActivity(intent);
             }
         });
     }
@@ -199,17 +200,6 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
             .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
             .clientId(PayPalConfig.PAYAPAL_CLIENT_ID);
 
-    private void payPalPayment() {
-        PayPalPayment payment = new PayPalPayment(new BigDecimal(ridePrice), "USD", "Uber Ride",
-                PayPalPayment.PAYMENT_INTENT_SALE);
-
-        Intent intent = new Intent(this, PaymentActivity.class);
-
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
-        intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payment);
-
-        startActivityForResult(intent, PAYPAL_REQUEST_CODE);
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -284,6 +274,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
     }
     private void getRouteToMarker() {
         Routing routing = new Routing.Builder()
+                .key("AIzaSyCftogS2Kh131Lo8_0hUlksb8nzqm8MWno")
                 .travelMode(AbstractRouting.TravelMode.DRIVING)
                 .withListener(this)
                 .alternativeRoutes(false)
@@ -299,7 +290,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
 
 
     private List<Polyline> polylines;
-    private static final int[] COLORS = new int[]{R.color.primary_dark_material_light};
+    private static final int[] COLORS = new int[]{R.color.red};
     @Override
     public void onRoutingFailure(RouteException e) {
         if(e != null) {

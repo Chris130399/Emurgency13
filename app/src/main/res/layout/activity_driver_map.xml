@@ -3,48 +3,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DriverMapActivity">
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Driver.DriverMapActivity">
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        map:cameraBearing="0"
+        map:cameraZoom="20"
+        map:mapType="normal"
+        map:uiCompass="true"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="true"
+        map:uiZoomControls="true"
+        map:uiZoomGestures="true"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
             <Button
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
                 android:id="@+id/logout"
-                android:text="logout"/>
+                android:text="logout"
+                android:shadowColor="@color/dark_gray"
+                android:elevation="25dp"
+                android:fontFamily="@font/sf_bold"
+                android:textColor="@color/off_white"
+                android:background="@drawable/maps_button"/>
+
             <Button
-                android:layout_weight="1"
+                android:layout_weight="0.8"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:id="@+id/history"
-                android:text="history"/>
+                android:text="history"
+                android:shadowColor="@color/dark_gray"
+                android:elevation="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/red"
+                android:fontFamily="@font/sf_bold"
+                android:background="@drawable/maps_button2"/>
+
             <Button
-                android:layout_weight="1"
-                android:layout_gravity="end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
                 android:id="@+id/settings"
-                android:text="Settings"/>
+                android:text="Settings"
+                android:shadowColor="@color/dark_gray"
+                android:elevation="25dp"
+                android:textColor="@color/off_white"
+                android:fontFamily="@font/sf_bold"
+                android:background="@drawable/maps_button"/>
+
         </LinearLayout>
+
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
             android:text="Working"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/blue_gray"
             android:layout_margin="10sp"
             android:id="@+id/workingSwitch"/>
-    </LinearLayout>
 
+    </LinearLayout>
 
 
     <LinearLayout
@@ -53,51 +93,81 @@
         android:id="@+id/customerInfo"
         android:layout_gravity="bottom"
         android:orientation="vertical"
-        android:background="@android:color/white"
+        android:background="@drawable/drivers_info"
         android:visibility="gone"
-        android:elevation="1dp"
+        android:shadowColor="@color/dark_gray"
+        android:elevation="25dp"
         android:translationZ="1dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                app:civ_border_color="@color/red"
+                app:civ_border_width="4dp"
                 android:id="@+id/customerProfileImage"
-                android:src="@drawable/ic_default_user"
-                android:padding="20sp"/>
+                android:src="@drawable/ic_default_user" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="40sp">
+                android:paddingStart="10sp"
+                android:paddingEnd="180dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/customerDestination"
                     android:paddingBottom="10sp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/blue_gray"
+                    android:textSize="14sp"
                     android:text="Destination: --"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/customerName"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/blue_gray"
+                    android:textSize="14sp"
                     android:paddingBottom="10sp"
                     android:paddingTop="20sp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/customerPhone"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/blue_gray"
+                    android:textSize="14sp"
                     android:paddingBottom="10sp"
                     android:paddingTop="20sp"/>
+
             </LinearLayout>
+
         </LinearLayout>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="picked customer"
+            android:text="Picked Customer"
+            android:fontFamily="@font/sf_bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:background="@drawable/picked_customer"
+            android:textColor="@color/off_white"
             android:id="@+id/rideStatus"/>
 
-
     </LinearLayout>
+
 </FrameLayout>
