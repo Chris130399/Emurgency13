@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/singlelist_bg">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mcard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardBackgroundColor="@color/off_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/placeholder_image" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/image_gradient"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@drawable/image_cover"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mcard"
+        app:layout_constraintEnd_toEndOf="@+id/mcard"
+        app:layout_constraintStart_toStartOf="@+id/mcard" />
+
+    <TextView
+        android:id="@+id/list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sf_bold"
+        android:text="Measure Title"
+        android:textColor="@color/blue_gray"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcard" />
+
+    <TextView
+        android:id="@+id/list_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/sf_light"
+        android:text="Description"
+        android:maxLines="3"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:textColor="@color/blue_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_title"
+        app:lineHeight="28dp" />
+
+    <TextView
+        android:id="@+id/list_tag"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/sf_thin"
+        android:text="TAGS"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_desc" />
+
+    <Button
+        android:id="@+id/list_btn"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/ellipse_background"
+        android:fontFamily="@font/sf_bold"
+        android:padding="1dp"
+        android:text="Details"
+        android:elevation="10dp"
+        android:textColor="@color/off_white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_tag" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

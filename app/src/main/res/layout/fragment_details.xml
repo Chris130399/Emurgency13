@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home.DetailsFragment"
+    android:background="@drawable/background_2">
+
+    <ImageView
+        android:id="@+id/details_image"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/placeholder_image"
+        tools:srcCompat="@drawable/placeholder_image"/>
+
+    <TextView
+        android:id="@+id/details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_bold"
+        android:text="Quiz Title"
+        android:textColor="@color/red"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_image"/>
+
+    <TextView
+        android:id="@+id/details_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/sf_bold"
+        android:text="Quiz Description"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_title"
+        app:lineHeight="28dp"/>
+
+    <TextView
+        android:id="@+id/details_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_light"
+        android:text="Tags"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_desc"/>
+
+    <Button
+    android:id="@+id/details_btn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="32dp"
+    android:background="@drawable/login_button"
+    android:fontFamily="@font/sf_bold"
+    android:textColor="@color/off_white"
+    android:text="Go to Steps Page"
+    android:textAllCaps="false"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

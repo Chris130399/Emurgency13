@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:gravity="fill_vertical"
+    android:background="@color/blue_gray">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m4_01">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <ImageView
+                    android:id="@+id/image_drowns1"
+                    android:src="@drawable/drown_1"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_drowns1"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_drowns1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="1. Move the Person"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_drowns1"
+                    android:layout_below="@id/title_drowns1"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Take the person out of the water. | Before you attempt a rescue, you need to make sure that you are not putting yourself in danger. | f the drowning victim is nearby, you may be able to use equipment to reach them."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m4_02">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <ImageView
+                    android:id="@+id/image_drowns2"
+                    android:src="@drawable/drown_2"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp" />
+
+                <TextView
+                    android:id="@+id/title_drowns2"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_drowns2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="2. Check for Breathing!"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_drowns2"
+                    android:layout_below="@id/title_drowns2"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Place your ear next to the person's mouth and nose. Do you feel air on your cheek? | Look to see if the person's chest is moving."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m4_03">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <ImageView
+                    android:id="@+id/image_drowns3"
+                    android:src="@drawable/drown_3_"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_drowns3"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_drowns3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="3. If the Person is Not Breathing, Check Pulse"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_drowns3"
+                    android:layout_below="@id/title_drowns3"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="3"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Check the person's pulse for 10 seconds."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m4_04">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <ImageView
+                    android:id="@+id/image_drowns4"
+                    android:src="@drawable/drown_4"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+
+                <TextView
+                    android:id="@+id/title_drowns4"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_drowns4"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="4. If There is No Pulse, Start CPR"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_drowns4"
+                    android:layout_below="@id/title_drowns4"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="8"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Carefully place person on the back. | For an adult or child, place the heel of one hand on the center of the chest at the nipple line. You can also push with one hand on top of the other. "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m4_05">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="420dp">
+
+                <ImageView
+                    android:id="@+id/image_drowns5"
+                    android:src="@drawable/drown_5"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:padding="20dp"/>
+
+                <TextView
+                    android:id="@+id/title_drowns5"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_drowns5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="5. CPR!"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_drowns5"
+                    android:layout_below="@id/title_drowns5"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="For an adult or child, press down at least 2 inches. Make sure not to press on ribs. | Check to see if the person has started breathing."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m4_06">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp">
+
+                <ImageView
+                    android:id="@+id/image_drowns6"
+                    android:src="@drawable/burns_9"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_drowns6"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_drowns6"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="6. Meanwhile, Call the Emergency Services"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_drowns6"
+                    android:layout_below="@id/title_drowns6"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Repeat if person is still Not Breathing and call the Emergency Services!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</ScrollView>

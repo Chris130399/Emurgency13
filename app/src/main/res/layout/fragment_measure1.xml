@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:gravity="fill_vertical"
+    android:background="@color/blue_gray">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m1_01">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:src="@drawable/choking_1"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="1. Assess the Situation"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_below="@id/title"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Make sure the person is choking and determine whether it is a partial or total airway obstruction. In PARTIAL airway obstruction the person will be able to speak, cry out, cough or respond to you."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/m1_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:layout_below="@+id/m1_01">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="420dp">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:src="@drawable/choking_2"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="2. Give up to 5 blows between the shoulder blades with your hand"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc2"
+                    android:layout_below="@id/title2"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="3"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Give 5 Back to Back blows with your hand behind the person."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/m1_03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:layout_below="@+id/m1_02">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:src="@drawable/choking_3"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="3. If Person Is Still Choking, Do Thrusts"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc3"
+                    android:layout_below="@id/title3"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="6"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Stand behind the person and wrap your arms around the waist | Place your clenched fist just above the person’s navel | Grab your fist with your other hand | Quickly pull inward and upward as if trying to lift the person up. (x5)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/m1_04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:layout_below="@+id/m1_03">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:src="@drawable/choking_4"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title4"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image4"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="4. If the person is Obese or Pregnant, do High Abdominal Thrusts"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc4"
+                    android:layout_below="@id/title4"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="3"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Stand behind the person, wrap your arms them, and position your hands at the base of the breast bone."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/m1_05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:layout_below="@+id/m1_04">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <ImageView
+                    android:id="@+id/image5"
+                    android:src="@drawable/choking_5"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title5"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="5. Make sure the Object is Completely Gone!"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc5"
+                    android:layout_below="@id/title5"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Once the airway is cleared, parts of the object that caused the person to choke can remain behind. If the person is able, ask the victim to spit it out and breathe without difficulty."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/m1_06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:layout_below="@+id/m1_05">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <ImageView
+                    android:id="@+id/image6"
+                    android:src="@drawable/choking_6"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title6"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image6"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="6. Check to see if Normal Breathing has returned."
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc6"
+                    android:layout_below="@id/title6"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Once the object is gone, most people will return to breathing normally. If normal breathing has not returned or if the person loses consciousness, move to the next step."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/m1_07"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:layout_below="@+id/m1_06">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <ImageView
+                    android:id="@+id/image7"
+                    android:src="@drawable/choking_8"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title7"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image7"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="7. Call Emergency Services!"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc7"
+                    android:layout_below="@id/title7"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="If you're alone and choking, CALL 101 or your local emergency number immediately. Even if you can't speak, most emergency services still send someone to check out all calls."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/m1_08"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:layout_below="@+id/m1_06">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <ImageView
+                    android:id="@+id/image8"
+                    android:src="@drawable/choking_7"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+
+                <TextView
+                    android:id="@+id/title8"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image8"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="8. HELPING YOURSELF!"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc8"
+                    android:layout_below="@id/title8"
+                    android:fontFamily="@font/sf_bold"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="7"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Make a fist. Place it on your abdomen just above your navel. | Hold that fist with your other hand. | Bend over a chair, table, counter or other solid object. | Drive your fist in and up as described above. | Repeat until the object is removed. | Make sure the object is completely gone."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

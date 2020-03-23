@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Home.HomeActivity">
+
+
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:fab_addButtonColorNormal="#b71c1c"
+        app:fab_addButtonColorPressed="@color/red"
+        app:fab_addButtonPlusIconColor="@color/off_white"
+        app:fab_labelStyle="@style/custom_fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/off_white"
+            app:fab_icon="@drawable/floating_icon"
+            app:fab_size="mini"
+            app:fab_title="CALL 101" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/off_white"
+            app:fab_icon="@drawable/floating_icon2"
+            app:fab_size="mini"
+            app:fab_title="Nearby Ambulance" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

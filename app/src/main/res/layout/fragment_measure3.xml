@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:gravity="fill_vertical"
+    android:background="@color/blue_gray">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_01">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="375dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure1"
+                    android:src="@drawable/seizure_1"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure1"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="1.Make the person lie down"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure1"
+                    android:layout_below="@id/title_seizure1"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Make sure you help the person lay down. If the person is lying down when you find them, try to get them onto their side with their mouth angled towards the floor."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_02">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure2"
+                    android:src="@drawable/seizure_2"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure2"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="2.Clear away any harmful objects"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure2"
+                    android:layout_below="@id/title_seizure2"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="People who have seizures may injure themselves by hitting furniture, walls, or other nearby objects. To help the person avoid injury, move all objects around them as far away as possible."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_03">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure3"
+                    android:src="@drawable/seizure_3"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure3"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="3.Avoid placing anything in the person’s mouth"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure3"
+                    android:layout_below="@id/title_seizure3"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="3"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Never place anything in a seizing person’s mouth and do not try to restrain the person."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_04">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure4"
+                    android:src="@drawable/seizure_4"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure4"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure4"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="4.Time the duration and remain calm"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure4"
+                    android:layout_below="@id/title_seizure4"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="If someone near you has a seizure, you should try to time the length of the seizure. You should stay calm to help the person who is seizing."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_05">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure5"
+                    android:src="@drawable/seizure_5"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure5"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="5.Turn the person to their side and observe for any injury"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure5"
+                    android:layout_below="@id/title_seizure5"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Once the seizure is over, turn the person to their side and observe for any injury. Wait till the person regains complete consciousness. Stay with the person while they rest and recover."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_06">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure6"
+                    android:src="@drawable/seizure_6"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure6"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure6"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="6.Time the person’s recovery"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure6"
+                    android:layout_below="@id/title_seizure6"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Just like you timed the seizure, you should also time their recovery. Evaluate how long it takes for the person to recover from the seizure and return to their normal state and activity level."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_07">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure7"
+                    android:src="@drawable/seizure_7"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure7"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure7"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="7.Call an Emergency service"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure7"
+                    android:layout_below="@id/title_seizure7"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="3"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="If they take longer than 15 minutes to recover, call emergency services."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="12dp"
+            app:cardElevation="8dp"
+            android:id="@+id/m3_08">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <ImageView
+                    android:id="@+id/image_seizure8"
+                    android:src="@drawable/seizure_8"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/title_seizure8"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_below="@id/image_seizure8"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:text="8.Reassure the person"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/desc_seizure8"
+                    android:layout_below="@id/title_seizure8"
+                    android:textColor="@color/light_gray"
+                    android:fontFamily="@font/sf_bold"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="5"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:text="Seizures can be frightening and stressful situations. Remember that a person may be confused or embarrassed when they wake up. Remind the person they are safe. When they are conscious and alert, explain what happened to them."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

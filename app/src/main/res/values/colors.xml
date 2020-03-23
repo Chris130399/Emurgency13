@@ -12,4 +12,13 @@
     <color name="gray">#E8EBEC</color>
 
 
+    <!-- intro slider colors -->
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
+
+    <!-- splash screen -->
+    <color name="splash_screen_title">#ef5350</color>
+
+
 </resources>

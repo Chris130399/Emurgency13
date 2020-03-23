@@ -11,24 +11,25 @@
     <uses-permission android:name="ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/app_icon"
+        android:label="Emurgency Application"
+        android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
         <service
-            android:name=".onAppKilled"
+            android:name=".Maps.onAppKilled"
             android:stopWithTask="false" />
 
-        <activity android:name=".Driver.DriverSettingsActivity" />
-        <activity android:name=".Customer.CustomerSettingsActivity" />
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".HistorySingleActivity" />
-        <activity android:name=".historyRecyclerView.HistoryObject" />
+        <activity android:name=".Maps.Driver.DriverSettingsActivity" />
+        <activity android:name=".Maps.Customer.CustomerSettingsActivity" />
+        <activity android:name=".Maps.HistoryActivity" />
+        <activity android:name=".Maps.HistorySingleActivity" />
+        <activity android:name=".Maps.historyRecyclerView.HistoryObject" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -42,14 +43,21 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Customer.CustomerMapActivity"
+            android:name=".Maps.Customer.CustomerMapActivity"
             android:label="@string/title_activity_customer_map" />
         <activity
-            android:name=".Driver.DriverMapActivity"
+            android:name=".Maps.Driver.DriverMapActivity"
             android:label="@string/title_activity_driver_map" />
-        <activity android:name=".Customer.CustomerLoginActivity" />
-        <activity android:name=".Driver.DriverLoginActivity" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".Maps.Customer.CustomerLoginActivity" />
+        <activity android:name=".Maps.Driver.DriverLoginActivity" />
+        <activity android:name=".Maps.MainActivity"/>
+        <activity android:name=".Maps.Payments.RazorPay" />
+
+        <activity android:name=".Home.HomeActivity" />
+        <activity android:name=".IntroSlider.IntroActivity" />
+        <activity android:name=".IntroSlider.Splash_screen">
+
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />
@@ -57,8 +65,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
 
             </intent-filter>
+
         </activity>
-        <activity android:name=".Payments.RazorPay" />
+        <activity android:name=".Measures.MeasureListActivity" />
 
         <!-- Add your Razor API key here -->
         <meta-data
