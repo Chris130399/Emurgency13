@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showToast("Calling 101");
-                dialContactPhone("9326700947");
+                dialContactPhone("101");
 
             }
         });
